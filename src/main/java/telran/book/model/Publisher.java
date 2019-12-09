@@ -14,7 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -30,8 +30,8 @@ public class Publisher implements Serializable {
 
 	@Id
 	String publisherName;
-	@OneToMany(mappedBy = "publisher")
-	Set<Book> books;
+//	@OneToMany(mappedBy = "publisher")
+//	Set<Book> books;
 
 	public Publisher(String publisherName) {
 		this.publisherName = publisherName;
