@@ -140,7 +140,7 @@ public class BookServiceImpl implements BookService {
 		if (author == null) {
 			return null;
 		}
-//		author.getBooks().forEach(b -> bookRepository.delete(b));
+		bookRepository.findByAuthorsName(authorName).forEach(b -> bookRepository.delete(b));
 		authorRepository.deleteById(authorName);
 		return authorToAuthorDto(author);
 	}
